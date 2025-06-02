@@ -1,0 +1,144 @@
+/* ===== Particle Background ===== */
+.todo-app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(135deg, #f0f5ff, #e0f2ff);
+}
+
+/* ===== Main Container ===== */
+.Todocontainer {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.heading {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e40af;
+}
+
+/* ===== Input Section ===== */
+.input-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.addbtn {
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addbtn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ===== Task List ===== */
+.List-component ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.List-component li {
+  position: relative;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  background: rgba(239, 246, 255, 0.8);
+  border-radius: 8px;
+  border-left: 3px solid #93c5fd;
+  transition: all 0.3s ease;
+}
+
+.List-component li:hover {
+  background: rgba(219, 234, 254, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-text {
+  flex: 1;
+  color: #1e3a8a;
+}
+
+/* ===== Right-Aligned Buttons ===== */
+.task-actions {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.delete { color: #ef4444; }
+.moveup { color: #3b82f6; }
+.movedown { color: #3b82f6; }
+
+.task-actions button:hover {
+  transform: scale(1.2);
+  background: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Todocontainer {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
